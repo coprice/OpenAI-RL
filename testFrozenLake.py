@@ -1,9 +1,12 @@
 import gym
-from learningAgents import QLearningAgent, FrozenLakeQLAgent, RandomAgent
-from MDP import FrozenLakeMDP
-from valueIterationAgents import FrozenLakeVIAgent
 
-# Actions: left (0), down (1), right (2), up (3)
+from learningAgents import QLearningAgent, FrozenLakeQLAgent, RandomAgent
+from valueIterationAgents import FrozenLakeVIAgent
+from MDP import FrozenLakeMDP
+
+
+# ACTIONS: left (0), down (1), right (2), up (3)
+
 
 """
 FrozenLake 4x4 tests
@@ -49,6 +52,7 @@ print 'Testing Random Solution...\n'
 
 random_agent = RandomAgent(env, testing_iterations)
 random_agent.test_frozen_lake(4)
+
 
 """
 FrozenLake 8x8 tests

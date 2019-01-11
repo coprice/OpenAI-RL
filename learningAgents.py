@@ -1,7 +1,9 @@
 import gym
 import random
+
 import utils
 from searchTaxi import *
+
 
 """
 General class to inherit for other learning algo classes
@@ -63,6 +65,7 @@ class LearningAgent:
         print 'Learned Policy:', policy
         print 'Optimal Policy: {}\n'.format([0]*5)
 
+
 """
 Random Agent to compare with
 """
@@ -72,6 +75,7 @@ class RandomAgent(LearningAgent):
 
     def getPolicy(self, obs):
         return self.env.action_space.sample()
+
 
 """
 Agent for Tabular Q-Learning
@@ -126,6 +130,7 @@ class QLearningAgent(LearningAgent):
                 self.updateQValues(prevObs, action, obs, reward)
                 prevObs = obs
 
+
 """
 QLearning with extra incentives for taxi
 """
@@ -158,6 +163,7 @@ class TaxiQLAgent(QLearningAgent):
 
                 self.updateQValues(prevObs, action, obs, reward)
                 prevObs = obs
+
 
 """
 QLearning with extra incentives for FrozenLake

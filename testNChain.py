@@ -1,9 +1,12 @@
 import gym
+
 from learningAgents import QLearningAgent, RandomAgent
 from valueIterationAgents import NChainVIAgent
 from MDP import NChainMDP
 
+
 # ACTIONS: 0 forward, 1 backwards
+
 
 print 'Testing Q-Learning...\n'
 
@@ -37,11 +40,3 @@ p, n = 0.8, 5
 mdp = NChainMDP(p, n)
 valueAgent = NChainVIAgent(mdp, testing_iterations)
 valueAgent.test_agent(env, n)
-
-
-
-
-
-
-
-

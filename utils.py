@@ -1,14 +1,15 @@
 import random
-import gym
 import heapq
+import gym
+
 
 def run_tests(agent, trials):
     results = []
     for _ in trials:
         result = agent.train_agent()
         results.append(result)
-
     return results
+
 
 class PriorityQueue:
     """
@@ -47,6 +48,7 @@ class PriorityQueue:
                 break
         else:
             self.push(item, priority)
+
 
 class Counter(dict):
     """
@@ -260,6 +262,7 @@ class Counter(dict):
                 continue
             addend[key] = -1 * y[key]
         return addend
+
 
 def flipCoin( p ):
     r = random.random()
